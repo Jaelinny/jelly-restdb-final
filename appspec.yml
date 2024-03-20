@@ -7,7 +7,7 @@ files:
 
 permissions:
   - object: /
-    pattern: "*.sh"
+    pattern: "**"
     owner: ubuntu
     group: ubuntu
     mode: 744
@@ -15,9 +15,9 @@ permissions:
 hooks:
   AfterInstall:
     - location: stop.sh
-      timeout: 180
+      timeout: 300
       runas: ubuntu
   ApplicationStart:
     - location: start.sh
-      timeout: 180
+      timeout: 300
       runas: ubuntu
